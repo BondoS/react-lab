@@ -1,10 +1,8 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-function labLine(props) {
-  const { dataSetLabel, chartData, color } = props.chart;
+function Chart({ dataSetLabel, chartData, color, backgroundColorAlpha }) {
   const chartLabels = [...Array(chartData.length).keys()];
-  const backgroundColorAlpha = '0.2';
   const borderColorAlpha = '1';
   return (
     <div>
@@ -37,9 +35,7 @@ function labLine(props) {
             yAxes: [
               {
                 ticks: {
-                  beginAtZero: true,
-                  suggestedMin: 0,
-                  suggestedMax: 20
+                  beginAtZero: true
                 }
               }
             ]
@@ -50,4 +46,4 @@ function labLine(props) {
   );
 }
 
-export default labLine;
+export default Chart;
