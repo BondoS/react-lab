@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "react"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["error"],
+    // Allow JSX in .js file extension as well as default .jsx
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+  }
+}
