@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Series from '../Series/Series';
 import getCharts from '../../services/getCharts';
-import calcThreshold from '../../utils/get-threshold';
+import calcThreshold from '../../utils/getThreshold';
 import classes from './Main.module.scss';
 
 function Main() {
