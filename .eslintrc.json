@@ -14,6 +14,10 @@
   "rules": {
     "prettier/prettier": ["error"],
     // Allow JSX in .js file extension as well as default .jsx
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx"] }
+    ],
+    "eslint/quotes": "single"
   }
 }
