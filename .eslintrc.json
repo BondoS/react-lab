@@ -18,6 +18,6 @@
       "error",
       { "extensions": [".js", ".jsx"] }
     ],
-    "eslint/quotes": "single"
+    "prettier/quotes": "single"
   }
 }
