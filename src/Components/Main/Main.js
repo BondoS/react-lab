@@ -9,13 +9,13 @@ function Main() {
     {
       dataSetLabel: 'Loading...',
       chartData: [1, 2, 1, 0, 1, 0],
-      peaks: [1, 2, 1, 0, 1, 0],
+      peaks: [0, 0, 1, 1, 0, 0],
       color: 'rgb(192,192,192)'
     },
     {
       dataSetLabel: 'Loading...',
       chartData: [0, 2, 1, 2, 3, 10, 12, 1],
-      peaks: [0, 2, 1, 2, 3, 10, 12, 1],
+      peaks: [0, 0, 0, 1, 1, 0, 1, 1],
       color: 'rgb(192,192,192)'
     }
   ]);
