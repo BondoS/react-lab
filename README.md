@@ -17,3 +17,5 @@
 #### I used colors from [materila-ui color palatte](https://material-ui.com/customization/color/#color-palette) to randomize graphs colors.
 
 #### Please run `npm run analyze` to analyze bundle size.
+
+#### Please run `yarn install` then `yarn start` to run the project locally.
