@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import * as actions from '../../store/actions';
 import Series from '../Series/Series';
-import getCharts from '../../services/getCharts';
 import classes from './Main.module.scss';
 
 function Main() {
-  const [charts, setCharts] = useState([
-    {
-      dataSetLabel: 'Loading...',
-      chartData: [1, 2, 1, 0, 1, 0],
-      peaks: [1, 2, 1, 0, 1, 0],
-      color: 'rgb(192,192,192)'
-    },
-    {
-      dataSetLabel: 'Loading...',
-      chartData: [0, 2, 1, 2, 3, 10, 12, 1],
-      peaks: [0, 2, 1, 2, 3, 10, 12, 1],
-      color: 'rgb(192,192,192)'
-    }
-  ]);
+  const dispatch = useDispatch();
+  const { charts } = useSelector(state => state.charts);
+
   useEffect(() => {
-    getCharts().then(r => {
-      setCharts(r);
-    });
+    dispatch(
+      actions.chartGetInitiate(
+        `https://docs.google.com/spreadsheets/d/e/2PACX-1vTOLa7GDMYPChB9ZwTP3XexYz8VrnDWQWDwtt_PEnaHCOME3YDPME3cb9k2x4MMWgBDfbmKPAv3WZCc/pub?output=csv`
+        // `https://docs.google.com/spreadsheets/d/e/2PACX-1vQgOcBHZw1doMOLYaTAlG4V4MnS26pbQYbET5ygUavmGIz23Q6yDD7RFbxgYxNMFw/pub?output=xlsx`
+      )
+    );
   }, []);
 
   return (
@@ -33,4 +26,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default connect()(Main);
