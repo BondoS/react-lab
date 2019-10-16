@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Series from '../Series/Series';
 import getCharts from '../../services/getCharts';
-import calcThreshold from '../../utils/getThreshold';
 import classes from './Main.module.scss';
 
 function Main() {
@@ -21,18 +20,7 @@ function Main() {
   ]);
   useEffect(() => {
     getCharts().then(r => {
-      const withThreshold = r.map((_, index) => {
-        const threshold = calcThreshold(r[index].chartData);
-        const peaks = r[index].chartData.map(item =>
-          item >= threshold ? 1 : 0
-        );
-        return {
-          ...r[index],
-          threshold,
-          peaks
-        };
-      });
-      setCharts(withThreshold);
+      setCharts(r);
     });
   }, []);
 
