@@ -12,9 +12,4 @@ Reading excel sheets and drawing a graph
 - Assuming the max number in the data set is 10
 - Then we will get the number 8 as the result of the current data set threshold
 
-### Importing spreedsheet files
-
-- I haven't used https://www.npmjs.com/package/xlsx to parse the response for two reasons.
-  - It has an extreme bundle size
-  - Currently all we need is a simple parser, no need for extra library.
-    ![image](https://user-images.githubusercontent.com/2457873/66717964-d3983100-edde-11e9-8fb5-8bebe10998db.png)
+* I used colors from [materila-ui color palatte](https://material-ui.com/customization/color/#color-palette) to randmize graphs colors
