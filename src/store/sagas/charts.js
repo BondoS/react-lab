@@ -1,5 +1,5 @@
 import { put } from 'redux-saga/effects';
-import getCharts from '../../services/getCharts';
+import getCharts from '../../Services/getCharts';
 import { chartGetSuccess, chartGetFail } from '../actions';
 
 export function* chartGetSaga({ url }) {
